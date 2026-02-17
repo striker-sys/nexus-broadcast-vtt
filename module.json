@@ -21,6 +21,7 @@
   "esmodules": ["nexus-broadcast.js"],
   "socket": true,
 
-  "manifest": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/latest/download/module.json",
+  "manifest": "https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/refs/heads/main/module.json",
   "download": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/latest/download/Nexus.Broadcast.zip"
 }
+

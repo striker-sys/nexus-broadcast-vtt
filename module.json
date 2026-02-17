@@ -3,7 +3,7 @@
   "title": "Nexus Broadcast",
   "description": "Broadcast Text-Overlay (center/scroll) via SocketLib for Foundry V13.",
   "version": "1.0.0",
-  "authors": [{ "name": "Local" }],
+  "authors": [{ "name": "Kuberia" }],
   "compatibility": { "minimum": "13", "verified": "13" },
   "relationships": {
     "requires": [
@@ -11,4 +11,5 @@
     ]
   },
   "esmodules": ["nexus-broadcast.js"]
+
 }

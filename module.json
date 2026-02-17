@@ -6,7 +6,7 @@
   "version": "1.0.1",
   "authors": [
     {
-      "name": "Kuberia"
+      "name": "Kuberia",
       "url": "https://github.com/striker-sys/nexus-broadcast-vtt"
     }
   ],
@@ -25,3 +25,4 @@
   "manifest": "https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/manifest.json",
   "download": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/download/latest/Nexus.Broadcast.zip"
 }
+

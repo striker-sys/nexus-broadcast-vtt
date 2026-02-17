@@ -20,6 +20,6 @@ await sock.executeForEveryone("showScroll", {
   fontSize: 48,          // Schrift Größe Standard 48
   width: "80%",          // Breite des Textes auf dem Bildschirm
 
-  fadeInMs: 900,         // Geschwindigkeit des einblendens.
-  fadeOutMs: 1200        // Geschwindigkeit des Ausblendens.
+  fadeInMs: 900,         // Einblendezeit in Millisekunden.
+  fadeOutMs: 1200        // Ausblendezeit in Millisekunden.
 });

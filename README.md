@@ -56,7 +56,7 @@ Designed for story intros, dramatic reveals, combat warnings, and immersive narr
 Setup → Add-on Modules → Install Module → Manifest URL
 ```
 
-[https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/module.json](https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/module.json)
+[https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/module.json](https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/refs/heads/main/module.json))
 
 ---
 

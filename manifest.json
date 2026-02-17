@@ -13,7 +13,7 @@
     ]
   },
 
-  "esmodules": ["nexus-overlay.js"],
+  "esmodules": ["nexus-broadcast.js"],
 
   "manifest": "https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/manifest.json",
   "download": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/download/release/Nexus.Broadcast.zip"

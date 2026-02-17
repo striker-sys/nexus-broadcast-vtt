@@ -3,7 +3,7 @@
   "title": "Nexus Broadcast",
   "description": "Broadcast Text-Overlay (center/scroll) via SocketLib for Foundry V13.",
   "url": "https://github.com/striker-sys/nexus-broadcast-vtt",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     {
       "name": "Kuberia"

@@ -10,7 +10,6 @@
       "url": "https://github.com/striker-sys/nexus-broadcast-vtt"
     }
   ],
-
   "compatibility": { "minimum": "13", "verified": "13" },
 
   "relationships": {
@@ -20,9 +19,8 @@
   },
 
   "esmodules": ["nexus-broadcast.js"],
+  "socket": true,
 
-	"socket": true,
-  "manifest": "https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/manifest.json",
-  "download": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/download/latest/Nexus.Broadcast.zip"
+  "manifest": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/latest/download/module.json",
+  "download": "https://github.com/striker-sys/nexus-broadcast-vtt/releases/latest/download/Nexus.Broadcast.zip"
 }
-

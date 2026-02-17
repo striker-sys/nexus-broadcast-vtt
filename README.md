@@ -185,8 +185,6 @@ await sock.executeForEveryone("showCenter", {
 
 ....
 
----
 
-## 👤 Author
 
 Created for immersive storytelling in Foundry VTT.

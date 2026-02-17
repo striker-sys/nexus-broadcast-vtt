@@ -16,8 +16,8 @@ await sock.executeForEveryone("showCenter", {
   width: "50%",           // Breite der Anzeige im verhältniss zum Bildschirm
   fontSize: 44,           // Schriftgröße
 
-  fadeInMs: 200,          // Einblende Zeit in Millisekunden.
-  fadeOutMs: 900,         // Ausblende zeit in Millisekunden.
+  fadeInMs: 200,          // Einblendezeit in Millisekunden.
+  fadeOutMs: 900,         // Ausblendezeit in Millisekunden.
 
   background: "transparent" // z.B. "rgba(0,0,0,0.35)"
 });

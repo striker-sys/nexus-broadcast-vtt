@@ -1,8 +1,8 @@
 /* =====================================================================================
- * Nexus Overlay (Foundry V13) - SocketLib receiver + helper (ROBUST INIT)
+ * Nexus Broadcast (Foundry V13) - SocketLib receiver + helper (ROBUST INIT)
  * ===================================================================================== */
 
-const MODULE_ID = "nexus-overlay";
+const MODULE_ID = "nexus-broadcast";
 
 // ---------------------------
 // Overlay Helpers
@@ -171,7 +171,7 @@ function initNexusOverlaySocket() {
     game[`${MODULE_ID}_socket`] = sock;
 
     // Sichtbarer Hinweis (nur GM)
-    if (game.user?.isGM) ui.notifications.info("Nexus Overlay: Socket registriert ✅");
+    if (game.user?.isGM) ui.notifications.info("Nexus Broadcast: Socket registriert ✅");
     console.log(`[${MODULE_ID}] Socket registriert ✅`);
 
     return true;
@@ -190,7 +190,7 @@ Hooks.once("init", () => {
 // 1) Normal: wenn SocketLib meldet „ready“
 Hooks.once("socketlib.ready", () => initNexusOverlaySocket());
 
-// 2) Fallback: wenn socketlib.ready schon vorbei war, versuchen wir es nach World-Ready + retries
+// 2) Fallback: wenn socketlib.ready schon vorbei war. World-Ready + retries
 Hooks.once("ready", () => {
   let tries = 0;
   const maxTries = 10;
@@ -201,3 +201,4 @@ Hooks.once("ready", () => {
     if (ok || tries >= maxTries) clearInterval(t);
   }, 500);
 });
+

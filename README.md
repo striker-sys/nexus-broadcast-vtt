@@ -5,6 +5,8 @@ Broadcast cinematic text overlays (scrolling or centered) to **all connected pla
 
 Designed for story intros, dramatic reveals, combat warnings, and immersive narrative moments.
 
+Now includes **optional integration with Monk’s Active Tile Triggers** (MATT) to trigger overlays directly from tiles—no macros required.
+
 ---
 
 ## ✨ Features
@@ -21,6 +23,12 @@ Designed for story intros, dramatic reveals, combat warnings, and immersive narr
   - Background styling
 - 🔌 Uses SocketLib for reliable multi-client execution
 - 🧩 Built for Foundry VTT V13
+- 🧱 **Monk’s Active Tile Triggers Integration (optional)**
+  - Adds tile actions:
+    - **Nexus Broadcast: Scroll**
+    - **Nexus Broadcast: Center**
+  - Supports MATT variable resolution (Handlebars / tile context)
+  - Supports targeting (Everyone / Players / GM / Triggering User / Token Owner)
 
 ---
 
@@ -28,6 +36,11 @@ Designed for story intros, dramatic reveals, combat warnings, and immersive narr
 
 - Foundry VTT **V13**
 - SocketLib **v1.1.3+**
+
+### Optional (for Tile Integration)
+- **Monk’s Active Tile Triggers** (`monks-active-tiles`)
+
+> If Monk’s Active Tile Triggers is not installed/active, Nexus Broadcast still works normally via macros.
 
 ---
 
@@ -56,13 +69,22 @@ Designed for story intros, dramatic reveals, combat warnings, and immersive narr
 Setup → Add-on Modules → Install Module → Manifest URL
 ```
 
-[https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/module.json](https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/refs/heads/main/module.json)
+https://raw.githubusercontent.com/striker-sys/nexus-broadcast-vtt/main/module.json
 
 ---
 
 ## 🚀 Usage
 
-After activating the module and restarting Foundry, create a **Script Macro** as GM.
+After activating the module and restarting Foundry, you have **two ways** to use Nexus Broadcast:
+
+1) **Macros (default)**  
+2) **Monk’s Active Tile Triggers actions (optional)**
+
+---
+
+## 🧙 Option A — Use via Macro (GM)
+
+Create a **Script Macro** as GM.
 
 ---
 
@@ -108,6 +130,28 @@ await sock.executeForEveryone("showCenter", {
   fadeOutMs: 800
 });
 ```
+
+---
+
+## 🧱 Option B — Use via Monk’s Active Tile Triggers (MATT)
+
+If you have **Monk’s Active Tile Triggers** installed and active, Nexus Broadcast adds a new **Action Group**:
+
+- **Nexus Broadcast**
+
+with two actions:
+
+- **Nexus Broadcast: Scroll**
+- **Nexus Broadcast: Center**
+
+### How to use
+1. Create / select a tile
+2. Add an action from the group **Nexus Broadcast**
+3. Configure HTML + timing
+4. Trigger the tile → overlay plays for your selected target audience
+
+### Timing input note
+In the MATT UI, **fade timings are configured in seconds** (e.g. `1.2`) and are converted internally to milliseconds.
 
 ---
 
@@ -157,6 +201,11 @@ await sock.executeForEveryone("showCenter", {
 - Make sure the module is activated in the World
 - All players must reload after installation
 
+### Monk’s actions don’t appear in Tile config
+- Make sure **Monk’s Active Tile Triggers** is installed and activated
+- Reload the world after enabling modules
+- Re-open the tile config window (the action list may not refresh live)
+
 ---
 
 ## 🧠 How It Works
@@ -165,12 +214,9 @@ await sock.executeForEveryone("showCenter", {
 2. Two handlers are registered:
    - `showScroll`
    - `showCenter`
-3. The GM macro calls:
-
-   ```javascript
-   executeForEveryone(...)
-   ```
-
+3. The GM triggers overlays either by:
+   - **Macro:** `executeForEveryone(...)`
+   - **MATT Tile Action:** the action calls the same socket handlers
 4. All connected clients render the overlay locally.
 
 ---
@@ -178,14 +224,17 @@ await sock.executeForEveryone("showCenter", {
 ## 📜 License
 
 [GENERAL PUBLIC LICENSE](https://github.com/striker-sys/nexus-broadcast-vtt?tab=GPL-3.0-1-ov-file)
+[FOUNDRY LIZENZ](https://foundryvtt.com/article/license/)
 
 ---
 
 ## 💡 Planned Enhancements
 
-Integration to Monk's Active Tile Triggers
-....
+- More presets (Star Wars crawl, chapter cards, alerts)
+- Per-user styling overrides (GM vs players)
+- Optional sound triggers
+- More MATT targeting options & presets
 
-
+---
 
 Created for immersive storytelling in Foundry VTT.

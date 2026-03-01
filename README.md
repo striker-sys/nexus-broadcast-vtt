@@ -224,6 +224,7 @@ In the MATT UI, **fade timings are configured in seconds** (e.g. `1.2`) and are 
 ## 📜 License
 
 [GENERAL PUBLIC LICENSE](https://github.com/striker-sys/nexus-broadcast-vtt?tab=GPL-3.0-1-ov-file)
+
 [FOUNDRY LIZENZ](https://foundryvtt.com/article/license/)
 
 ---
